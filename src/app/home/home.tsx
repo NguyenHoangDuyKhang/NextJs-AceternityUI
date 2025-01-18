@@ -13,7 +13,7 @@ import Image from "next/image";
 import { TitleHome } from "../component/title";
 import { Card } from "../component/card";
 
-const words = ["tốt hơn", "dễ thương", "đẹp", "hiện đại"];
+const words = ["HTML", "CSS/SCSS", "JAVASCRIP", "TYPESCRIP", "NEXTJS",];
 
 export const HeroParallax = ({
   products,
@@ -110,13 +110,15 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+    <>
+     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold text-stone-900">
-        Xây dựng
+        Kinh nghiệm
         <TitleHome words={words} /> <br />
-        trang web tạo CV chuyên nghiệp
       </h1>
     </div>
+    </>
+   
   );
 };
 
@@ -144,12 +146,9 @@ export const ProductCard = ({
     >
       <Card title={product.title}>
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[400px] h-[400px] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Aceternity UI
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-black">
+          {product.title}
           </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">{product.title}</span>
-          </div>
           <Image
             src={product.thumbnail}
             alt="Product Thumbnail"
@@ -161,6 +160,7 @@ export const ProductCard = ({
           />
         </div>
       </Card>
+      <h1>mới sửa</h1>
     </motion.div>
   );
 };
